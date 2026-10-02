@@ -20,7 +20,7 @@ from scipy import stats
 RANDOM_STATE = 42
 QUICK_SAMPLE_SIZE = 10_000  # rows used for a quick test run
 SILHOUETTE_SAMPLE_SIZE = 10_000  # rows used for the silhouette score in Task 2
-CV_FOLDS = 5  # 5-fold cross-validation (full run takes about 15 minutes)
+CV_FOLDS = 5  # 5-fold cross-validation (full run of script 03 takes about 13 minutes)
 
 # --- File paths ---
 PROJECT_ROOT = Path(__file__).resolve().parent

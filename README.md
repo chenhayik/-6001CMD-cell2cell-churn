@@ -96,18 +96,14 @@ number from `outputs/` into the report.
 
 | Script | Runtime |
 |---|---|
-| `01_data_quality.py` | 19.9 seconds |
-| `02_paradigm_evidence.py` | 37.3 seconds |
-| `03_preprocessing_pipeline.py` | 742.3 seconds (about 12.4 minutes) |
+| `01_data_quality.py` | 21.0 seconds |
+| `02_paradigm_evidence.py` | 52.7 seconds |
+| `03_preprocessing_pipeline.py` | 795.0 seconds (about 13.3 minutes) |
 
 `03_preprocessing_pipeline.py` is dominated by Table 15: a stratified
 cross-validated comparison of 6 resampling strategies x 3 classifiers = 18
-pipeline configurations. `common.CV_FOLDS = 5` (the textbook default) is used
-throughout, including Tables 15, 16 and 17: the measured full run took about
-12.4 minutes in total with 5 folds, comfortably inside the assignment's ~20
-minute allowance for this step, so the fallback to 3 folds ("if the full run
-would take more than about 20 minutes, reduce to 3 folds via a constant") is
-not needed. Each script also prints its own elapsed time on completion, and
+pipeline configurations, using 5-fold cross-validation (`common.CV_FOLDS`)
+throughout. Each script also prints its own elapsed time on completion, and
 that figure is written to `key_numbers.json` as `script0N_runtime_seconds`.
 
 ## Output map
@@ -116,11 +112,10 @@ Everything is written under `outputs/`:
 
 ```
 outputs/
-  figures/            Fig01_....png to Fig16_....png (dpi 200, bbox tight)
+  figures/            Fig01_....png to Fig17_....png (dpi 200, bbox tight)
   tables/              Table01_....csv to Table18_....csv
   figure_table_register.md   number, file, caption, task, script for every output
   key_numbers.json           every headline number the report would quote
-  _register_state.csv        internal bookkeeping for the register (not a deliverable)
 ```
 
 `outputs/figure_table_register.md` and `outputs/key_numbers.json` are
@@ -131,7 +126,7 @@ single source of truth for "which script produced this number/figure/table".
 |---|---|
 | `01_data_quality.py` | Table 1, 2, 5 to 11; Figure 1, 2, 5 to 11 |
 | `02_paradigm_evidence.py` | Table 3, 4; Figure 3, 4 |
-| `03_preprocessing_pipeline.py` | Table 12 to 18; Figure 12 to 16 |
+| `03_preprocessing_pipeline.py` | Table 12 to 18; Figure 12 to 17 |
 
 See `outputs/figure_table_register.md` after running the scripts for the
 full list with captions, and `outputs/key_numbers.json` for every number in
@@ -192,6 +187,3 @@ machine-readable form.
   missing (see `PLACEHOLDER_RULES` in `common.py`).
 - `CustomerID` is dropped before any modelling step. The holdout file is
   never used for modelling; it has no labels.
-- No em dashes or en dashes are used anywhere in the code, comments,
-  captions or this README; commas, colons, parentheses or "to" are used
-  instead.
