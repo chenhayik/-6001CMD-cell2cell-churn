@@ -1,0 +1,9 @@
+feature,skew_raw,skew_log1p,skew_boxcox,skew_yeojohnson
+CallForwardingCalls,91.79732459483574,34.957,not applicable: non-positive values,14.83825061504297
+RoamingCalls,58.990224676252616,3.024,not applicable: non-positive values,1.1901842641781857
+ReferralsMadeBySubscriber,38.710767092887636,5.038,not applicable: non-positive values,4.243140019482931
+AdjustmentsToCreditRating,19.933860853731936,6.573,not applicable: non-positive values,4.98570297747483
+ThreewayCalls,18.315749154801278,3.265,not applicable: non-positive values,1.112553262370961
+DirectorAssistedCalls,14.674730465350793,1.746,not applicable: non-positive values,0.5234865188361593
+Handsets,3.353158088008634,1.360,0.415,0.4515903610774429
+UniqueSubs,2.7005096877299404,1.376,0.581,0.5951804216738311

@@ -1,0 +1,18 @@
+metric,value
+Training rows,"51,047"
+Training columns (total),58
+  id columns,1
+  target columns,1
+  numeric continuous columns,11
+  numeric count/average columns,22
+  binary Yes/No columns,15
+  nominal categorical columns,5
+  ordinal categorical columns,3
+Target Churn = Yes,"14,711 (28.8%)"
+Target Churn = No,"36,336 (71.2%)"
+"Target imbalance ratio, majority:minority",2.47:1
+"Training memory usage, deep (MB)",75.8
+Holdout rows,"20,000"
+Holdout columns,58
+Holdout Churn non-null count,"0 (entirely empty, not usable for modelling)"
+Train/holdout CustomerID overlap,0 (no shared customers)

@@ -1,0 +1,59 @@
+name,pandas_dtype,analytical_type,description,non_null_count,unique_count,range_or_levels,notes
+CustomerID,int64,id,unique subscriber identifier,51047,51047,3000002.00 to 3399994.00,"identifier, excluded from modelling"
+Churn,str,target,target: whether the customer churned (Yes/No),51047,2,2 levels,
+MonthlyRevenue,float64,numeric_continuous,mean monthly revenue (USD),50891,12665,-6.17 to 1223.38,
+MonthlyMinutes,float64,numeric_continuous,mean monthly minutes of use,50891,2719,0.00 to 7359.00,
+TotalRecurringCharge,float64,numeric_continuous,mean total monthly recurring charge (USD),50891,214,-11.00 to 400.00,
+DirectorAssistedCalls,float64,numeric_continuous,mean number of directory-assisted calls per month,50891,146,0.00 to 159.39,
+OverageMinutes,float64,numeric_continuous,mean monthly minutes used beyond the plan allowance,50891,746,0.00 to 4321.00,
+RoamingCalls,float64,numeric_continuous,mean number of roaming calls per month,50891,530,0.00 to 1112.40,
+PercChangeMinutes,float64,numeric_continuous,percentage change in minutes of use versus the previous period,50680,2262,-3875.00 to 5192.00,
+PercChangeRevenues,float64,numeric_continuous,percentage change in revenue versus the previous period,50680,2899,-1107.70 to 2483.50,
+DroppedCalls,float64,numeric_count,mean number of dropped voice calls per month,51047,285,0.00 to 221.70,
+BlockedCalls,float64,numeric_count,mean number of blocked (failed connection) calls per month,51047,373,0.00 to 384.30,
+UnansweredCalls,float64,numeric_count,mean number of unanswered calls per month,51047,840,0.00 to 848.70,
+CustomerCareCalls,float64,numeric_count,mean number of calls placed to customer care per month,51047,185,0.00 to 327.30,
+ThreewayCalls,float64,numeric_count,mean number of three-way calls per month,51047,78,0.00 to 66.00,
+ReceivedCalls,float64,numeric_count,mean number of inbound calls received per month,51047,6121,0.00 to 2692.40,
+OutboundCalls,float64,numeric_count,mean number of outbound calls placed per month,51047,787,0.00 to 644.30,
+InboundCalls,float64,numeric_count,mean number of inbound calls per month,51047,472,0.00 to 519.30,
+PeakCallsInOut,float64,numeric_count,mean number of inbound and outbound calls during peak hours,51047,1839,0.00 to 2090.70,
+OffPeakCallsInOut,float64,numeric_count,mean number of inbound and outbound calls during off-peak hours,51047,1669,0.00 to 1474.70,
+DroppedBlockedCalls,float64,numeric_count,mean number of dropped or blocked calls per month (intended to equal DroppedCalls + BlockedCalls),51047,447,0.00 to 411.70,"inconsistent with DroppedCalls + BlockedCalls in about 19.6% of rows, see Table 11"
+CallForwardingCalls,float64,numeric_count,mean number of call-forwarding calls per month,51047,31,0.00 to 81.30,
+CallWaitingCalls,float64,numeric_count,mean number of call-waiting calls per month,51047,223,0.00 to 212.70,
+MonthsInService,int64,numeric_count,months since account activation,51047,56,6.00 to 61.00,
+UniqueSubs,int64,numeric_count,number of unique subscribers on the account,51047,15,1.00 to 196.00,
+ActiveSubs,int64,numeric_count,number of active subscribers on the account,51047,12,0.00 to 53.00,
+ServiceArea,str,nominal_categorical,service area code: 3-letter market + 3-letter city + 3-digit telephone area code,51023,747,747 levels,"747 levels; first 3 characters encode a 57-level market, see Task 3 Figure 11"
+Handsets,float64,numeric_count,number of handsets issued to the account,51046,23,1.00 to 24.00,
+HandsetModels,float64,numeric_count,number of distinct handset models issued to the account,51046,13,1.00 to 15.00,
+CurrentEquipmentDays,float64,numeric_continuous,days since the current handset was issued,51046,1438,-5.00 to 1812.00,
+AgeHH1,float64,numeric_continuous,age of the first adult in the household (years),50138,43,0.00 to 99.00,"placeholder: 0 is not a plausible age (13,917 rows)"
+AgeHH2,float64,numeric_continuous,"age of the second adult in the household (years), 0 if none or unrecorded",50138,43,0.00 to 99.00,"placeholder: 0 is not a plausible age (26,087 rows); ambiguous, may mean no second adult"
+ChildrenInHH,str,binary_yesno,whether children are present in the household,51047,2,2 levels,
+HandsetRefurbished,str,binary_yesno,whether the current handset is refurbished,51047,2,2 levels,
+HandsetWebCapable,str,binary_yesno,whether the current handset can browse the web,51047,2,2 levels,
+TruckOwner,str,binary_yesno,whether the household owns a truck,51047,2,2 levels,
+RVOwner,str,binary_yesno,whether the household owns a recreational vehicle,51047,2,2 levels,
+Homeownership,str,nominal_categorical,"whether home-ownership status is known (Known/Unknown), not ownership itself",51047,2,2 levels,"records whether ownership status is known, not ownership itself"
+BuysViaMailOrder,str,binary_yesno,whether the customer buys via mail order,51047,2,2 levels,
+RespondsToMailOffers,str,binary_yesno,whether the customer responds to mail offers,51047,2,2 levels,
+OptOutMailings,str,binary_yesno,whether the customer opted out of marketing mailings,51047,2,2 levels,
+NonUSTravel,str,binary_yesno,whether the customer travels outside the United States,51047,2,2 levels,
+OwnsComputer,str,binary_yesno,whether the household owns a computer,51047,2,2 levels,
+HasCreditCard,str,binary_yesno,whether the customer has a credit card on file,51047,2,2 levels,
+RetentionCalls,int64,numeric_count,number of calls made to the retention team,51047,5,0.00 to 4.00,possible leakage: contact with the retention team may reflect churn intent recorded close to the churn decision
+RetentionOffersAccepted,int64,numeric_count,number of retention offers accepted,51047,4,0.00 to 3.00,possible leakage: contact with the retention team may reflect churn intent recorded close to the churn decision
+NewCellphoneUser,str,binary_yesno,whether the customer is a first-time cellphone user,51047,2,2 levels,"redundant pair: both No in 34,188 rows (67.0%) means new/not-new status is unknown, not that the customer is neither"
+NotNewCellphoneUser,str,binary_yesno,whether the customer is not a first-time cellphone user,51047,2,2 levels,"redundant pair: both No in 34,188 rows (67.0%) means new/not-new status is unknown, not that the customer is neither"
+ReferralsMadeBySubscriber,int64,numeric_count,number of referrals made by the subscriber,51047,13,0.00 to 35.00,
+IncomeGroup,int64,ordinal_categorical,"household income band, 1 (lowest) to 9 (highest); 0 appears to mean unknown",51047,10,0.00 to 9.00,"placeholder: 0 appears to mean unknown income (12,835 rows); bands otherwise run 1 to 9"
+OwnsMotorcycle,str,binary_yesno,whether the household owns a motorcycle,51047,2,2 levels,
+AdjustmentsToCreditRating,int64,numeric_count,number of adjustments made to the customer's credit rating,51047,15,0.00 to 25.00,
+HandsetPrice,str,ordinal_categorical,handset price band in USD,51047,16,16 levels,"placeholder: 'Unknown' text mixed with a numeric USD price band (28,982 rows)"
+MadeCallToRetentionTeam,str,binary_yesno,whether the customer ever called the retention team,51047,2,2 levels,possible leakage: contact with the retention team may reflect churn intent recorded close to the churn decision
+CreditRating,str,ordinal_categorical,"ordinal credit-rating band, 1-Highest to 7-Lowest",51047,7,7 levels,
+PrizmCode,str,nominal_categorical,geodemographic segment (PRIZM cluster code),51047,4,4 levels,"'Other' is a vague catch-all (48.3% of rows), reported but not treated as missing"
+Occupation,str,nominal_categorical,customer's occupation category,51047,8,8 levels,"'Other' is a vague catch-all (73.7% of rows), reported but not treated as missing"
+MaritalStatus,str,nominal_categorical,whether the customer is married (Yes/No); Unknown where not captured,51047,3,3 levels,"placeholder: 'Unknown' text alongside Yes/No (19,700 rows)"

@@ -1,0 +1,41 @@
+algorithm,n,fit_time_seconds,complexity,note
+KMeans,2000,0.2769462999995085,O(n k i d),
+KMeans,5000,0.3634697999996206,O(n k i d),
+KMeans,10000,0.15318089999982476,O(n k i d),
+KMeans,20000,0.2652970999997706,O(n k i d),
+KMeans,40000,0.754626100000678,O(n k i d),
+MiniBatchKMeans,2000,0.24782880000020668,"O(b k i d), b = batch size",
+MiniBatchKMeans,5000,0.11339769999995042,"O(b k i d), b = batch size",
+MiniBatchKMeans,10000,0.05043720000048779,"O(b k i d), b = batch size",
+MiniBatchKMeans,20000,0.0687393999996857,"O(b k i d), b = batch size",
+MiniBatchKMeans,40000,0.13617030000023078,"O(b k i d), b = batch size",
+AgglomerativeClustering,2000,0.12713719999919704,O(n^2) memory,
+AgglomerativeClustering,5000,0.9759998999998061,O(n^2) memory,
+AgglomerativeClustering,10000,4.751716200000374,O(n^2) memory,
+AgglomerativeClustering,20000,,O(n^2) memory,not run: O(n^2) memory
+AgglomerativeClustering,40000,,O(n^2) memory,not run: O(n^2) memory
+LogisticRegression,2000,0.11958859999958804,O(n d i),
+LogisticRegression,5000,0.01947889999973995,O(n d i),
+LogisticRegression,10000,0.025818099999924016,O(n d i),
+LogisticRegression,20000,0.07870189999994182,O(n d i),
+LogisticRegression,40000,0.08395019999989017,O(n d i),
+RandomForest (100 trees),2000,0.21735669999998208,O(trees n log(n) d),
+RandomForest (100 trees),5000,0.41153469999972003,O(trees n log(n) d),
+RandomForest (100 trees),10000,0.7241669000004549,O(trees n log(n) d),
+RandomForest (100 trees),20000,1.3950383000001239,O(trees n log(n) d),
+RandomForest (100 trees),40000,2.924936300000809,O(trees n log(n) d),
+HistGradientBoosting,2000,1.5441854000000603,"O(rounds n d), histogram-based",
+HistGradientBoosting,5000,0.40558640000017476,"O(rounds n d), histogram-based",
+HistGradientBoosting,10000,0.5307354999995368,"O(rounds n d), histogram-based",
+HistGradientBoosting,20000,0.44072830000004615,"O(rounds n d), histogram-based",
+HistGradientBoosting,40000,0.43809020000026067,"O(rounds n d), histogram-based",
+SVC (RBF),2000,0.17968759999985195,O(n^2) to O(n^3),
+SVC (RBF),5000,1.179604300000392,O(n^2) to O(n^3),
+SVC (RBF),10000,5.262585100000251,O(n^2) to O(n^3),
+SVC (RBF),20000,,O(n^2) to O(n^3),not run: O(n^2) to O(n^3)
+SVC (RBF),40000,,O(n^2) to O(n^3),not run: O(n^2) to O(n^3)
+KNN (k=5),2000,0.000693400000272959,fit O(1) lazy; predict O(n d) per query,predict time for 1000 queries: 0.0347s
+KNN (k=5),5000,0.0013589000000138185,fit O(1) lazy; predict O(n d) per query,predict time for 1000 queries: 0.0106s
+KNN (k=5),10000,0.0010877000004256843,fit O(1) lazy; predict O(n d) per query,predict time for 1000 queries: 0.0144s
+KNN (k=5),20000,0.001540999999633641,fit O(1) lazy; predict O(n d) per query,predict time for 1000 queries: 0.0252s
+KNN (k=5),40000,0.0059535000000323635,fit O(1) lazy; predict O(n d) per query,predict time for 1000 queries: 0.0513s

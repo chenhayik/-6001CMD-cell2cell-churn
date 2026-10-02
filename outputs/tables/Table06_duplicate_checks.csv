@@ -1,0 +1,7 @@
+check,result
+Exact duplicate rows (all columns),0
+Duplicate rows ignoring CustomerID,0
+Duplicate rows on all features (ignoring CustomerID and Churn),0
+CustomerID unique,Yes
+CustomerID duplicate count,0
+Train/holdout CustomerID overlap,0

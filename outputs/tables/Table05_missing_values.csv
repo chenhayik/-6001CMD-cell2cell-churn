@@ -1,0 +1,18 @@
+column,true_nan_count,true_nan_pct,placeholder_count,placeholder_pct,combined_pct,placeholder_rule
+HandsetPrice,0,0.0,28982,0.5677512880286795,0.5677512880286795,"text 'Unknown' in an otherwise numeric USD handset price band: parse remaining values to float, set 'Unknown' to NaN"
+AgeHH2,909,0.017807118929613886,26087,0.5110388465531764,0.5288459654827904,0 may mean no second adult in the household or an unrecorded age (ambiguous): set to NaN for the age value
+MaritalStatus,0,0.0,19700,0.38591885909064194,0.38591885909064194,text 'Unknown' alongside Yes/No responses: set to NaN
+AgeHH1,909,0.017807118929613886,13917,0.2726311046682469,0.2904382235978608,0 is not a plausible age for the first adult in the household: set to NaN
+IncomeGroup,0,0.0,12835,0.25143495210296396,0.25143495210296396,"0 appears to denote unknown income: bands otherwise run 1 (lowest) to 9 (highest), set to NaN"
+PercChangeMinutes,367,0.007189452857170843,0,0.0,0.007189452857170843,not applicable: no disguised-missing rule for this column
+PercChangeRevenues,367,0.007189452857170843,0,0.0,0.007189452857170843,not applicable: no disguised-missing rule for this column
+MonthlyRevenue,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+MonthlyMinutes,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+TotalRecurringCharge,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+RoamingCalls,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+DirectorAssistedCalls,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+OverageMinutes,156,0.003056007209042647,0,0.0,0.003056007209042647,not applicable: no disguised-missing rule for this column
+ServiceArea,24,0.0004701549552373303,0,0.0,0.0004701549552373303,not applicable: no disguised-missing rule for this column
+CurrentEquipmentDays,1,1.958978980155543e-05,0,0.0,1.958978980155543e-05,not applicable: no disguised-missing rule for this column
+Handsets,1,1.958978980155543e-05,0,0.0,1.958978980155543e-05,not applicable: no disguised-missing rule for this column
+HandsetModels,1,1.958978980155543e-05,0,0.0,1.958978980155543e-05,not applicable: no disguised-missing rule for this column

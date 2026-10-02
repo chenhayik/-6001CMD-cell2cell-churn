@@ -1,0 +1,10 @@
+issue,columns_affected,rows_affected,pct_of_rows,example_values
+Impossible negative values,"MonthlyRevenue, TotalRecurringCharge, CurrentEquipmentDays",MonthlyRevenue: 3; TotalRecurringCharge: 8; CurrentEquipmentDays: 76,0.17% (rows with at least one),"mins: MonthlyRevenue -6.17, TotalRecurringCharge -11.00, CurrentEquipmentDays -5"
+"Fractional values in count-like columns (monthly averages, not raw counts)",all 22 numeric count/average columns,"DroppedCalls: 29,719",58.2% (DroppedCalls),ReceivedCalls 79.2%; PeakCallsInOut 61.8%; OffPeakCallsInOut 60.9%; UnansweredCalls 60.6%; DroppedBlockedCalls 59.7%
+NewCellphoneUser / NotNewCellphoneUser redundancy: both No means status unknown,"NewCellphoneUser, NotNewCellphoneUser","34,188",67.0%,"No/No=34188, No/Yes=7035, Yes/No=9824, Yes/Yes=0"
+DroppedBlockedCalls != DroppedCalls + BlockedCalls,"DroppedBlockedCalls, DroppedCalls, BlockedCalls","9,992",19.57%,"of 9,992 mismatches: 4,297 within 0.1 (rounding of 1-decimal averages), 5,695 larger"
+"Homeownership records whether ownership status is known, not ownership itself",Homeownership,"17,060",33.42%,"only takes values Known/Unknown, never a Yes/No ownership answer"
+HandsetPrice mixes a text placeholder with a numeric price band,HandsetPrice,"28,982",56.78%,"numeric bands seen (USD): 10, 30, 40, 60, 80, 100, 130, 150, 180, 200, 240, 250, 300, 400, 500"
+AgeHH1 / AgeHH2 zero is not a plausible age,"AgeHH1, AgeHH2","AgeHH1: 13,917; AgeHH2: 26,087",AgeHH1: 27.3%; AgeHH2: 51.1%,"AgeHH2 = 0 is ambiguous: may mean no second adult in the household, not a missing age"
+IncomeGroup 0 appears to mean unknown income,IncomeGroup,"12,835",25.14%,bands otherwise run 1 (lowest) to 9 (highest)
+"ServiceArea code encodes a market, city and telephone area code",ServiceArea,"51,023",99.95%,e.g. SEABLV425 = market SEA + city BLV + area code 425; 747 raw levels reduce to 57 markets

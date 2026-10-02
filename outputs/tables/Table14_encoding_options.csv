@@ -1,0 +1,10 @@
+feature,distinct_levels,onehot_columns,frequency_encoding_columns,target_encoder_columns
+ServiceArea (raw),729.0,729,1,1
+ServiceArea (extracted market),57.0,57,1,1
+PrizmCode,4.0,4,1,1
+Occupation,8.0,8,1,1
+Homeownership,2.0,2,1,1
+MaritalStatus,2.0,2,1,1
+CreditRating,7.0,7,1,1
+"TOTAL: all categoricals, one-hot with raw ServiceArea",,752,6,6
+"TOTAL: all categoricals, one-hot with extracted market",,80,6,6

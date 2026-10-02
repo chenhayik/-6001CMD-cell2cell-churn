@@ -1,0 +1,8 @@
+# Dataset: download from Kaggle (licence unknown, so not redistributed)
+data/
+
+# Python and editor files
+__pycache__/
+.venv/
+.idea/
+outputs/_register_state.csv
